@@ -8,7 +8,7 @@ describe('Show User', () => {
         truncate()
     })
     
-    it('deveria retornar um erro quando tentarmos PEGAR um usuário com um id inválido', async () => {
+    it('deveria retornar um erro quando tentarmos PEGAR um usuário com um id inválido.', async () => {
         const fakeID = 20;
 
         const response = await request(app)
@@ -22,7 +22,7 @@ describe('Show User', () => {
         expect(response.body.error.message).toBe("O usuário de id = " + fakeID + " não foi encontrado.");
     });
 
-    it('deveria recuperar um usuário executando um GET em /users/:id, sendo um usuário já cadastrado', async () => {
+    it('deveria recuperar um usuário executando um GET em /users/:id, sendo um usuário já cadastrado.', async () => {
         const user = await helpers.criaUser();
 
         const response = await request(app)

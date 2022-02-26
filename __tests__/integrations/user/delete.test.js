@@ -8,7 +8,7 @@ describe('Delete User', () => {
         truncate()
     })
     
-    it('deveria retornar um erro quando tentarmos DELETAR um user com um id inválido.', async () => {
+    it('deveria retornar um erro quando tentarmos DELETAR um usuário com um id inválido.', async () => {
         const fakeID = 1;
 
         const response = await request(app)

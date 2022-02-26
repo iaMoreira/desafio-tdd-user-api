@@ -15,7 +15,7 @@ describe('Update User', () => {
         const fakeID = 20;
 
         const response = await request(app)
-                            .put('/users/' + fakeID) // Lembrando que 3 é um id inválido, pq todos os users foram deletados
+                            .put('/users/' + fakeID)
                             .send(userFaker);
 
         expect(response.status).toBe(404);
@@ -25,7 +25,7 @@ describe('Update User', () => {
         expect(response.body.error.message).toBe("O usuário de id = " + fakeID + " não foi encontrado.");
     });
 
-    it('deveria atualizar um usuário executando um PUT em /users/:id, sendo um user já cadastrado', async () => {
+    it('deveria atualizar um usuário executando um PUT em /users/:id, sendo um usuário já cadastrado.', async () => {
         const user = await helpers.criaUser(); // antigo
         const userFaker = userFactory(); // novo
 
@@ -43,7 +43,7 @@ describe('Update User', () => {
 
     });
 
-    it('deveria não retonar o campo password no retorno da atualização do usuário ', async () => {
+    it('deveria não retonar o campo password no retorno da atualização do usuário.', async () => {
         const userFaker = userFactory();
 
         const response = await request(app)
@@ -56,7 +56,7 @@ describe('Update User', () => {
         expect(user.password).toBeUndefined()
     });
 
-    it('deveria não permitir atualizar users com um email existente.', async () => {
+    it('deveria não permitir atualizar usuários com um email existente.', async () => {
         const user = await helpers.criaUser();
         const userExistingEmail= await helpers.criaUser();
 

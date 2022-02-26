@@ -47,7 +47,7 @@ describe('Create User', () => {
         expect(response.body.error.message).toBe('O campo "password" é obrigatório!')
     });
 
-    it('deveria cadastrar um user quando executarmos um POST em /users com os dados válidos.', async () => {
+    it('deveria cadastrar um usuário quando executarmos um POST em /users com os dados válidos.', async () => {
         const userFaker = userFactory();
 
         const response = await request(app)
@@ -75,7 +75,7 @@ describe('Create User', () => {
         expect(user.password).toBeUndefined()
     });
 
-    it('deveria não permitir cadastrar users com um email existente.', async () => {
+    it('deveria não permitir cadastra um usuário com um email existente.', async () => {
         const userFaker = userFactory();
 
         const response = await request(app)
