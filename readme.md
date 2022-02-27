@@ -2,10 +2,20 @@
 
 ## Sobre o desafio 
 
-Faça o deafio!
+Faça o clone do projeto:
 
+````bash
+git clone https://github.com/iaMoreira/desafio-tdd-user-api.git
+````
+
+Instale as dependências:
+
+````bash
+npm install
+````
 
 ### Execute os testes
+
 
 Executar todos os testes dentro `__tests__`
 ````bash
@@ -14,9 +24,19 @@ npm test
 
 Selecionar apenas um arquivo de teste, para testar individualmente:
 
-````bash
+````
 npx jest ./__tests__/integrations/user/create.test.js
 ````
+
+> OBS: para quem utiliza o Windows será necessário 
+> ````bash
+> npm i -g win-node-env
+> ````
+
+> OBS: talvez durante a execução dos testes o módulo `sqlite3` não seja reconhecido, caso apareça esse erro `ERROR: Please install sqlite3 package manually`, será necessário executar o seguinte comando:
+> ````bash
+> npm i -g sqlite3
+>````
 
 ## Como Esse projeto foi desenvolvido
 
